@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Task 5</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <section class="wrapper__task math-task">
+        <a href="../index.html" class="math-task__link">До списку задач</a>
+        <p class="math-task__description">
+          Задача 5. З клавіатури вводиться назва категорії водія (А-мотоцикл,
+          В-легковий автомобіль, С-вантажний автомобіль). Вивести на екран назву
+          транспортного засобу, яким він може керувати
+        </p>
+        <script>
+          //Отримуємо вхідні дані
+          const userCategory = prompt(
+            "Введіть категорію згідно Ваших водійських прав (A, B, C)"
+          ).toUpperCase();
+          let vhicle;
+          //Обчислюємо необхідні вирази та Виводимо результат
+          switch (userCategory) {
+            case "A":
+              vhicle = "<p>Мотоцикл</p>";
+              break;
+            case "B":
+              vhicle = "<p>Легковий автомобіль</p>";
+              break;
+            case "C":
+              vhicle = "<p>Вантажний автомобіль</p>";
+              break;
+            default:
+              vhicle = "<p>Введіть одну із запропонованих категорій</p>";
+              break;
+          }
+
+          document.write(vhicle);
+        </script>
+      </section>
+    </div>
+  </body>
+</html>

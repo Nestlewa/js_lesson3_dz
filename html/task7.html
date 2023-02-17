@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Task 7</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="wrapper__task math-task">
+        <a href="../index.html" class="math-task__link">До списку задач</a>
+        <p class="math-task__description">
+          З клавіатури вводиться номер місяця. Вивести до якої пори він
+          відноситься
+        </p>
+        <script>
+          //Отримуємо вхідні дані
+          const monthNumber = parseInt(
+            prompt("Введіть номер місяця згідно календаря(від 1 до 12")
+          )
+          let result
+
+          //Обчислюємо необхідні вирази та Виводимо результат
+          if (monthNumber <= 0 || monthNumber > 12)
+            result =
+              "<p>Помилка, у році тільки місяці від 1 до 12, введіть число в цьому діапазоні</p>"
+          else if (monthNumber <= 2 || monthNumber === 12)
+            result = "<p>Це зимовий місяць</p>"
+          else if (monthNumber <= 5) result = "<p>Це весняний місяць</p>"
+          else if (monthNumber <= 8) result = "<p>Це літній місяць</p>"
+          else result = "<p>Це осінній місяць</p>"
+          document.write(result)
+        </script>
+      </section>
+    </div>
+  </body>
+</html>

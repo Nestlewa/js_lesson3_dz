@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Task 4</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <section class="wrapper__task math-task">
+        <a href="../index.html" class="math-task__link">До списку задач</a>
+        <p class="math-task__description">
+          Задача 4. З клавіатури вводиться вік людини. Вивести на екран ким він
+          є (дитиною у садочку, школярем, студентом, працівником, пенсіонером)
+        </p>
+        <script>
+          //Отримуємо вхідні дані
+          const userAge = parseInt(prompt("Введіть свій вік"))
+          let result
+
+          //Обчислюємо необхідні вирази та Виводимо результат
+
+          if (userAge < 7) result = "<p>Ви дитина із садочку</p>"
+          else if (userAge <= 16) result = "<p>Ви школяр</p>"
+          else if (userAge <= 23) result = "<p>Ви студент</p>"
+          else if (userAge <= 59) result = "<p>Ви працівник</p>"
+          else if (userAge <= 100) result = "<p>Ви пенсіонер</p>"
+          else result = "<p>Ви все ще пенсіонер або так довго не живуть</p>"
+          document.write(result)
+          //   switch (true) {
+          //     case userAge < 7:
+          //       result = "<p>Ви дитина із садочку</p>";
+          //       break;
+          //     case userAge <= 16:
+          //       result = "<p>Ви школяр</p>";
+          //       break;
+          //     case userAge <= 23:
+          //       result = "<p>Ви студент</p>";
+          //       break;
+          //     case userAge <= 59:
+          //       result = "<p>Ви працівник</p>";
+          //       break;
+          //     case userAge <= 100:
+          //       result = "<p>Ви пенсіонер</p>";
+          //       break;
+          //     default:
+          //       result = "<p>Ви все ще пенсіонер або так довго не живуть</p>";
+          //   }
+          //   document.write(result);
+
+          //АБО
+        </script>
+      </section>
+    </div>
+  </body>
+</html>

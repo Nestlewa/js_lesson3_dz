@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="wrapper__task math-task">
+            <a href="../index.html" class="math-task__link">До списку задач</a>
+            <p class="math-task__description">
+                Задача 3. Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби
+            </p>
+            <script>
+                //Отримуємо вхідні дані
+                let userNumber = parseInt(prompt("Пропонуємо вгадати число від 1 до 5. У Вас є 2 спроби. Спроба 1: введіть, будь-ласка, число"))
+
+                const minNumber = 1
+                const maxNumber = 5
+                let randomNumber = minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1))
+
+                //Обчислюємо необхідні вирази та Виводимо результат
+                if (userNumber < minNumber || userNumber > maxNumber) {
+                    document.write(`
+                    <p>Введене Вами число не відповідає вимогам, будь-ласка, ще раз ознайомтесь з вимогами</p>
+                    `)
+                } else if (userNumber === randomNumber) {
+                    document.write(`
+                    <p>Вітаємо!Ви вгадали число з першої спроби</p>
+                    `)
+                } else {
+                    userNumber = parseInt(prompt("Пропонуємо вгадати число від 1 до 5. У Вас є 2 спроби. Спроба 2: введіть, будь-ласка, число"))
+                    if (userNumber === randomNumber) {
+                        document.write(`
+                        <p>Вітаємо! Друга спроба виграшна! Ви вгадали число!</p>
+                        `)
+                    } else {
+                        document.write(`
+                        <p>Нажаль, Ви не вгадали жодного разу! Оновіть сторінку та спробуйте ще раз</p>
+                        `)
+                    }
+                }
+            </script>
+        </section>
+    </div>
+</body>
+
+</html>
